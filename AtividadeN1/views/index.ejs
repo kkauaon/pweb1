@@ -1,6 +1,56 @@
 <%- include('partials/header.ejs') %>
-  <div class="container">
-    <p>Postagens mais recentes:</p>
-    <%- include('partials/post.ejs') %>
+  <div class="row w-100">
+    <div class="col-2">
+      <div class="container">
+        <h3>Lista de Canais</h3>
+        <ul id="channel-list">
+          <li><a href="#">#informática</a></li>
+          <li><a href="#">#química</a></li>
+          <li><a href="#">#mecânica</a></li>
+          <li><a href="#">#edificações</a></li>
+          <li><a href="#">#telecomunicações</a></li>
+          <li><a href="#">#eletrotécnica</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="container mx-5">
+        <div class="position-relative">
+          <label for="newPostTextArea" class="form-label h3">Nova postagem</label>
+          <textarea class="form-control pe-5" style="min-height: 80px;" id="newPostTextArea" rows="3"></textarea>
+          <div class="position-absolute" style="bottom: 10px; right: 110px;">
+            <select class="form-select" id="channelSelect" style="width: 200px;">
+              <option selected>Escolha o canal</option>
+              <option value="#informática">#informática</option>
+              <option value="#química">#química</option>
+              <option value="#mecânica">#mecânica</option>
+              <option value="#edificações">#edificações</option>
+              <option value="#telecomunicações">#telecomunicações</option>
+              <option value="#eletrotécnica">#eletrotécnica</option>
+            </select>
+          </div>
+          <button onclick="newPost()" type="button" class="btn btn-primary position-absolute" style="bottom: 10px; right: 20px;">
+            Enviar
+          </button>
+        </div>
+        <script>
+          // Auto-resize a textarea
+          document.addEventListener('DOMContentLoaded', function() {
+            var ta = document.getElementById('newPostTextArea');
+            function autoResize() {
+              ta.style.height = 'auto';
+              ta.style.height = ta.scrollHeight + 'px';
+            }
+            ta.addEventListener('input', autoResize);
+            autoResize();
+          });
+        </script>
+        <br>
+        <h3>Postagens mais recentes:</h3>
+        <%- include('partials/post.ejs') %>
+      </div>
+    </div>
   </div>
+  
+  <script src="javascripts/main.js"></script>
 <%- include('partials/footer.ejs') %>
