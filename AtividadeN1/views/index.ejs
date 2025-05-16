@@ -1,56 +1,48 @@
 <%- include('partials/header.ejs') %>
-  <div class="row w-100">
-    <div class="col-2">
-      <div class="container">
-        <h3>Lista de Canais</h3>
-        <ul id="channel-list">
-          <li><a href="#">#informática</a></li>
-          <li><a href="#">#química</a></li>
-          <li><a href="#">#mecânica</a></li>
-          <li><a href="#">#edificações</a></li>
-          <li><a href="#">#telecomunicações</a></li>
-          <li><a href="#">#eletrotécnica</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-8">
-      <div class="container mx-5">
-        <div class="position-relative">
-          <label for="newPostTextArea" class="form-label h3">Nova postagem</label>
-          <textarea class="form-control pe-5" style="min-height: 80px;" id="newPostTextArea" rows="3"></textarea>
-          <div class="position-absolute" style="bottom: 10px; right: 110px;">
-            <select class="form-select" id="channelSelect" style="width: 200px;">
-              <option selected>Escolha o canal</option>
-              <option value="#informática">#informática</option>
-              <option value="#química">#química</option>
-              <option value="#mecânica">#mecânica</option>
-              <option value="#edificações">#edificações</option>
-              <option value="#telecomunicações">#telecomunicações</option>
-              <option value="#eletrotécnica">#eletrotécnica</option>
-            </select>
-          </div>
-          <button onclick="newPost()" type="button" class="btn btn-primary position-absolute" style="bottom: 10px; right: 20px;">
-            Enviar
-          </button>
+<div class="flex md:flex-row flex-col-reverse w-full">
+  <%- include('partials/channel-sidebar.ejs') %>
+  <div class="md:w-4/6">
+    <div class="p-4">
+      <div class="relative">
+        <label for="newPostTextArea" class="block text-xl font-semibold text-gray-800 mb-2">Nova postagem</label>
+        <textarea placeholder="Comece a escrever aqui sua nova postagem..." class="block w-full rounded-md border border-gray-300 bg-white text-gray-900 px-3 py-2 pr-20 min-h-[120px] resize-none focus:ring-2 focus:ring-blue-500" id="newPostTextArea" rows="3"></textarea>
+        <div class="absolute bottom-2 right-25">
+          <select class="block w-52 rounded-md border border-gray-300 bg-white text-gray-900 px-2 py-1" id="channelSelect">
+            <option selected>Escolha o canal</option>
+            <option value="#informática">#informática</option>
+            <option value="#química">#química</option>
+            <option value="#mecânica">#mecânica</option>
+            <option value="#edificações">#edificações</option>
+            <option value="#telecomunicações">#telecomunicações</option>
+            <option value="#eletrotécnica">#eletrotécnica</option>
+          </select>
         </div>
-        <script>
-          // Auto-resize a textarea
-          document.addEventListener('DOMContentLoaded', function() {
-            var ta = document.getElementById('newPostTextArea');
-            function autoResize() {
-              ta.style.height = 'auto';
-              ta.style.height = ta.scrollHeight + 'px';
-            }
-            ta.addEventListener('input', autoResize);
-            autoResize();
-          });
-        </script>
-        <br>
-        <h3>Postagens mais recentes:</h3>
-        <%- include('partials/post.ejs') %>
+        <button onclick="newPost()" type="button" class="absolute bottom-2 right-4 h-[30px] bg-blue-600 hover:bg-blue-700 text-xs text-white font-semibold py-2 px-4 rounded-md shadow transition-colors">
+          Enviar
+        </button>
+      </div>
+      <script>
+        // Auto-resize a textarea
+        document.addEventListener('DOMContentLoaded', function() {
+          var ta = document.getElementById('newPostTextArea');
+          function autoResize() {
+            ta.style.height = 'auto';
+            ta.style.height = ta.scrollHeight + 'px';
+          }
+          ta.addEventListener('input', autoResize);
+          autoResize();
+        });
+      </script>
+      <br>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">Postagens mais recentes</h3>
+      <div class="flex flex-col gap-y-5">
+        <%- include('partials/post.ejs', { postData: { author: "Kauã Sousa", channel: "#informática" } }) %>
+        <%- include('partials/post.ejs', { postData: { author: "João Gabriel", channel: "#química" } }) %>
+        <%- include('partials/post.ejs', { postData: { author: "Lira Nascimento", channel: "#informática" } }) %>
       </div>
     </div>
   </div>
-  
-  <script src="javascripts/main.js"></script>
+</div>
+
+<script src="javascripts/main.js"></script>
 <%- include('partials/footer.ejs') %>
