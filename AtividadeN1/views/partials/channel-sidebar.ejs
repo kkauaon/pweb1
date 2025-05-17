@@ -2,12 +2,12 @@
     <div class="p-4">
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Lista de Canais</h3>
         <ul id="channel-list" class="space-y-1">
-            <li><a href="#" class="text-blue-600 hover:underline">#informática</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline">#química</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline">#mecânica</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline">#edificações</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline">#telecomunicações</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline">#eletrotécnica</a></li>
+            <%- include('channel-sidebar-button', { name: "#informática" }) %>
+            <%- include('channel-sidebar-button', { name: "#química" }) %>
+            <%- include('channel-sidebar-button', { name: "#mecânica" }) %>
+            <%- include('channel-sidebar-button', { name: "#edificações" }) %>
+            <%- include('channel-sidebar-button', { name: "#telecomunicações" }) %>
+            <%- include('channel-sidebar-button', { name: "#eletrotécnica" }) %>
         </ul>
     </div>
 </div>

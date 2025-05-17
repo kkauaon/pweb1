@@ -1,14 +1,13 @@
 <div class="container mx-auto border p-3 rounded bg-white border-gray-300">
     <div class="flex flex-col gap-3">
         <div class="flex flex-row items-center gap-2">
-            <img class="rounded-full" width="32" height="32"
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+            <%- include('avatar', { url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", size: "32" }) %>
             <p class="mb-0 font-bold text-gray-700"><b class="text-gray-800"><%= postData.author %></b> postou em <a class="hover:underline font-bold text-blue-600" href="#"><b><%= postData.channel %></b></a>:</p>
             <p class="mb-0 ml-auto text-gray-500 text-sm">
                 <%= new Date().toLocaleString("pt-BR") %>
             </p>
         </div>
-        <div class="flex">
+        <div class="flex flex-col gap-y-3">
             <p class="text-gray-800">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
                 placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
@@ -16,6 +15,15 @@
                 integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
                 conubia nostra inceptos himenaeos.
             </p>
+            <hr class="w-full border-gray-300" />
+            <div class="flex flex-row items-center w-full gap-x-1">
+                <button id="like-<%= postData.id %>" onclick="likepost('<%= user?true:false %>', '<%= postData.id %>')" aria-label="Curtir" data-liked="<%= postData.liked %>" data-likes="<%= postData.likes %>">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="<%= postData.liked ? `oklch(70.4% 0.191 22.216)` : `oklch(55.1% 0.027 264.364)` %>" fill="<%= postData.liked ? `oklch(70.4% 0.191 22.216)` : `none` %>">
+                        <path d="M10.4107 19.9677C7.58942 17.858 2 13.0348 2 8.69444C2 5.82563 4.10526 3.5 7 3.5C8.5 3.5 10 4 12 6C14 4 15.5 3.5 17 3.5C19.8947 3.5 22 5.82563 22 8.69444C22 13.0348 16.4106 17.858 13.5893 19.9677C12.6399 20.6776 11.3601 20.6776 10.4107 19.9677Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p id="like-txt-<%= postData.id %>" class="text-gray-500"><%= postData.likes %></p>
+            </div>
         </div>
     </div>
 </div>

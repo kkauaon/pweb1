@@ -6,3 +6,29 @@ function newPost() {
     else
         return alert("Postagem criada em " + channelSelect.value + "!")
 }
+
+function likepost(user, pid) {
+    if (user == "false") return alert("Você precisa estar logado para curtir postagens.")
+
+    const btn = document.querySelector('#like-' + pid);
+    const svg = btn.querySelector('svg');
+    const txt = document.querySelector('#like-txt-' + pid);
+
+    let liked = btn.dataset.liked === "true";
+    let likes = parseInt(btn.dataset.likes);
+
+    if (!liked) {
+        liked = true;
+        likes += 1;
+    } else {
+        liked = false;
+        likes -= 1;
+    }
+
+    svg.setAttribute('color', liked ? `oklch(70.4% 0.191 22.216)` : `oklch(55.1% 0.027 264.364)`)
+    svg.setAttribute('fill', liked ? `oklch(70.4% 0.191 22.216)` : `none`)
+
+    btn.dataset.liked = liked;
+    btn.dataset.likes = likes;
+    txt.textContent = likes;
+}
