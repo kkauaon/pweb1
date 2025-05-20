@@ -32,3 +32,7 @@ function likepost(user, pid) {
     btn.dataset.likes = likes;
     txt.textContent = likes;
 }
+
+function gologin() {
+    window.location.href = "/";
+}
