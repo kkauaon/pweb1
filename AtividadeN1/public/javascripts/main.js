@@ -1,10 +1,23 @@
 function newPost() {
     let channelSelect = document.querySelector("#channelSelect")
+    let textField = document.querySelector("#newPostTextArea")
+
+    if (!textField.value)
+        return alert("A postagem não pode estar vazia.")
 
     if (channelSelect.value == "Escolha o canal")
         return alert("Você deve escolher o canal para enviar sua postagem.")
-    else
-        return alert("Postagem criada em " + channelSelect.value + "!")
+
+    return alert("Postagem criada em " + channelSelect.value + "!")
+}
+
+function newPostChannel(channel) {
+    let textField = document.querySelector("#newPostTextArea")
+
+    if (!textField.value)
+        return alert("A postagem não pode estar vazia.")
+
+    return alert("Postagem criada em #" + JSON.parse(channel).channelName + "!")
 }
 
 function likepost(user, pid) {

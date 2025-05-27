@@ -1,8 +1,8 @@
 <div class="container mx-auto border p-3 rounded bg-white border-gray-300">
     <div class="flex flex-col gap-3">
         <div class="flex flex-row items-center gap-2">
-            <%- include('avatar', { url: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", size: "32" }) %>
-            <p class="mb-0 font-bold text-gray-700"><b class="text-gray-800"><%= postData.author %></b> postou em <a class="hover:underline font-bold text-blue-600" href="#"><b><%= postData.channel %></b></a>:</p>
+            <%- include('avatar', { url: "https://api.dicebear.com/9.x/avataaars/svg?seed="+encodeURIComponent(postData.author)+"&backgroundColor=65c9ff,b6e3f4,c0aede,d1d4f9,ffdfbf,ffd5dc", size: "32" }) %>
+            <p class="mb-0 font-bold text-gray-700"><b class="text-gray-800"><%= postData.author %></b> postou em <a class="hover:underline font-bold text-blue-600 pass-query-parameters" href="/channel/?c=<%= encodeURIComponent(postData.channel) %>"><b><%= postData.channel %></b></a>:</p>
             <p class="mb-0 ml-auto text-gray-500 text-sm">
                 <%= new Date().toLocaleString("pt-BR") %>
             </p>

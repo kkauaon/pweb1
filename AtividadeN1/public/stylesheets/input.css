@@ -7,6 +7,6 @@
     padding-left: 0;
 }
 
-#channel-list li {
-
+body {
+    min-height: 100vh;
 }

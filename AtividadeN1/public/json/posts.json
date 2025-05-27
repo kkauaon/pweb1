@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "author": "Sofia Ribeiro",
+        "channel": "#informática",
+        "likes": 12,
+        "liked": false
+    },
+    {
+        "id": 2,
+        "author": "Mateus Azevedo",
+        "channel": "#mecânica",
+        "likes": 25,
+        "liked": false
+    },
+    {
+        "id": 3,
+        "author": "Clara Nogueira",
+        "channel": "#química",
+        "likes": 8,
+        "liked": false
+    },
+    {
+        "id": 4,
+        "author": "Leonardo Barros",
+        "channel": "#eletrotécnica",
+        "likes": 33,
+        "liked": false
+    },
+    {
+        "id": 5,
+        "author": "Alice Gomes",
+        "channel": "#edificações",
+        "likes": 17,
+        "liked": false
+    },
+    {
+        "id": 6,
+        "author": "Enzo Carvalho",
+        "channel": "#telecomunicações",
+        "likes": 21,
+        "liked": false
+    },
+    {
+        "id": 7,
+        "author": "Valentina Moreira",
+        "channel": "#informática",
+        "likes": 38,
+        "liked": false
+    },
+    {
+        "id": 8,
+        "author": "Davi Cunha",
+        "channel": "#mecânica",
+        "likes": 6,
+        "liked": false
+    },
+    {
+        "id": 9,
+        "author": "Helena Pinto",
+        "channel": "#química",
+        "likes": 29,
+        "liked": false
+    },
+    {
+        "id": 10,
+        "author": "Bernardo Dias",
+        "channel": "#eletrotécnica",
+        "likes": 15,
+        "liked": false
+    }
+]

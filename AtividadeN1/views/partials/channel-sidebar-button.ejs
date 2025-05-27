@@ -1,3 +1,12 @@
-<li><button class="cursor-pointer w-full text-left px-3 py-2 rounded text-blue-600 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white transition-colors">
-    <%= name %>
-</button></li>
+<li>
+    <a href="/channel/<%= to %>" class="pass-query-parameters">
+        <button 
+            <% if (currentPath == `/channel/${to}`) { %>
+                class="cursor-pointer w-full text-left px-3 py-2 rounded text-blue-600 bg-blue-600 text-white transition-colors"
+            <% } else { %>
+                class="cursor-pointer w-full text-left px-3 py-2 rounded text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
+            <% } %>>
+            <%= name %>
+        </button>
+    </a>
+</li>
