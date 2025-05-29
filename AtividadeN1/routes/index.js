@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { user: req.query.u ? {
     name: req.query.u
-  } : null });
+  } : null, title: "Fórum IFCE - Início" });
 });
 
 module.exports = router;

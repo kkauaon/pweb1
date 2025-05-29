@@ -8,13 +8,7 @@
             </p>
         </div>
         <div class="flex flex-col gap-y-3">
-            <p class="text-gray-800">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-                placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
-                Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
-                integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
-                conubia nostra inceptos himenaeos.
-            </p>
+            <p class="text-gray-800 whitespace-pre"><%= postData.message %></p>
             <hr class="w-full border-neutral-200" />
             <div class="flex flex-row items-center w-full gap-x-1">
                 <button id="like-<%= postData.id %>" onclick="likepost('<%= user?true:false %>', '<%= postData.id %>')" aria-label="Curtir" data-liked="<%= postData.liked %>" data-likes="<%= postData.likes %>">

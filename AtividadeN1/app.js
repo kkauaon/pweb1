@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const posts = require('./public/json/posts.json')
 
 app.use((req,res,next)=>{
+  res.locals.title = "Fórum IFCE"
   res.locals.posts = posts
   res.locals.currentPath = req.path
   next()

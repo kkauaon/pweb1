@@ -4,15 +4,22 @@ var router = express.Router();
 const listChannels = require('../public/json/channels.json');
 
 router.get('/:channelName', function (req, res) {
+    const ch = listChannels.find(f => f.id == req.params.channelName) ?? {
+        "id": "unknown",
+        "name": "Canal Desconhecido",
+        "channelName": "canal-desconhecido"
+    }
+
     res.render('channel', {
         user: req.query.u ? {
             name: req.query.u
         } : null,
-        channel: listChannels.find(f => f.id == req.params.channelName) ?? {
+        channel: ch ?? {
             "id": "unknown",
             "name": "Canal Desconhecido",
             "channelName": "canal-desconhecido"
-        }
+        },
+        title: "Fórum IFCE - #"+ch.channelName
     });
 });
 

@@ -8,7 +8,7 @@ function newPost() {
     if (channelSelect.value == "Escolha o canal")
         return alert("Você deve escolher o canal para enviar sua postagem.")
 
-    return alert("Postagem criada em " + channelSelect.value + "!")
+    return alert("Postagem não criada em " + channelSelect.value + "!")
 }
 
 function newPostChannel(channel) {
@@ -17,11 +17,11 @@ function newPostChannel(channel) {
     if (!textField.value)
         return alert("A postagem não pode estar vazia.")
 
-    return alert("Postagem criada em #" + JSON.parse(channel).channelName + "!")
+    return alert("Postagem não criada em #" + JSON.parse(channel).channelName + "!")
 }
 
 function likepost(user, pid) {
-    if (user == "false") return alert("Você precisa estar logado para curtir postagens.")
+    if (user == "false") return alert("Entre na sua conta ou crie uma hoje mesmo para curtir postagens!")
 
     const btn = document.querySelector('#like-' + pid);
     const svg = btn.querySelector('svg');
