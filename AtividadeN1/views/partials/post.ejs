@@ -8,7 +8,7 @@
             </p>
         </div>
         <div class="flex flex-col gap-y-3">
-            <p class="text-gray-800 whitespace-pre"><%= postData.message %></p>
+            <p class="text-gray-800 whitespace-pre-line"><%= postData.message %></p>
             <hr class="w-full border-neutral-200" />
             <div class="flex flex-row items-center w-full gap-x-1">
                 <button id="like-<%= postData.id %>" onclick="likepost('<%= user?true:false %>', '<%= postData.id %>')" aria-label="Curtir" data-liked="<%= postData.liked %>" data-likes="<%= postData.likes %>">

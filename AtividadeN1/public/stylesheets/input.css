@@ -12,6 +12,6 @@ body {
     font-family: "Poppins", "Roboto", "Helvetica", sans-serif;
 }
 
-pre {
-    font-family: "Poppins", "Roboto", "Helvetica", sans-serif !important;
+html {
+  scrollbar-gutter: stable;
 }
