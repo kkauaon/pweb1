@@ -6,8 +6,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Atividade N1</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='/stylesheets/style.css'>
     <script src="/javascripts/script.js"></script>
 </head>
@@ -17,7 +18,7 @@
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="pass-query-parameters flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/images/logo.png" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fórum IFCE</span>
+                <span class="self-center text-2xl font-bold whitespace-nowrap text-green-950 dark:text-white">Fórum IFCE</span>
             </a>
             <button data-collapse-toggle="navbar-dropdown" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -31,14 +32,14 @@
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800">
                     <li>
                         <a href="/" 
                             <% if (currentPath === "/") { %>
-                                class="pass-query-parameters block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                                class="pass-query-parameters block py-2 px-3 text-white bg-green-700 rounded-sm md:bg-transparent md:text-green-700 md:p-0 "
                                 aria-current="page"
                             <% } else { %>
-                                class="pass-query-parameters block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                class="pass-query-parameters block py-2 px-3 text-green-950 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white  transition-colors duration-300 "
                             <% } %>
                         >Início</a>
                     </li>
@@ -46,27 +47,27 @@
                         <li>
                             <a href="/signin"
                                 <% if (currentPath === "/signin") { %>
-                                    class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                                    class="block py-2 px-3 text-white bg-green-700 rounded-sm md:bg-transparent md:text-green-700 md:p-0   "
                                     aria-current="page"
                                 <% } else { %>
-                                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                    class="block py-2 px-3 text-green-950 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0  transition-colors duration-300 "
                                 <% } %>
                             >Entrar</a>
                         </li>
                         <li>
                             <a href="/signup"
                                 <% if (currentPath === "/signup") { %>
-                                    class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                                    class="block py-2 px-3 text-white bg-green-700 rounded-sm md:bg-transparent md:text-green-700 md:p-0   "
                                     aria-current="page"
                                 <% } else { %>
-                                    class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                    class="block py-2 px-3 text-green-950 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0  transition-colors duration-300 "
                                 <% } %>
                             >Cadastrar</a>
                         </li>
                     <% } else { %>
                         <li>
                             <a href="/"
-                                class="flex flex-row gap-x-1 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><%= user.name %>
+                                class="flex flex-row gap-x-1 py-2 px-3 text-green-950 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0  transition-colors duration-300  ">Sair da Conta (<%= user.name %>)
                             <%- include('avatar', { url: `https://api.dicebear.com/9.x/initials/svg?seed=${user.name}&backgroundColor=039be5,3949ab,43a047,8e24aa,d81b60,f4511e,ffb300&fontFamily=Helvetica`, size: "24" }) %>
                             </a>
                         </li>

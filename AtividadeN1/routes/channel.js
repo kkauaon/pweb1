@@ -8,13 +8,21 @@ router.get('/:channelName', function (req, res) {
         user: req.query.u ? {
             name: req.query.u
         } : null,
-        channel: listChannels.find(f => f.id == req.params.channelName) ?? null
+        channel: listChannels.find(f => f.id == req.params.channelName) ?? {
+            "id": "unknown",
+            "name": "Canal Desconhecido",
+            "channelName": "canal-desconhecido"
+        }
     });
 });
 
 router.get('/', (req,res)=> {
     if (req.query.c) {
-        const ch = listChannels.find(c => "#"+c.channelName == req.query.c)
+        const ch = listChannels.find(c => "#"+c.channelName == req.query.c) ?? {
+            "id": "unknown",
+            "name": "Canal Desconhecido",
+            "channelName": "canal-desconhecido"
+        }
 
         if (!req.query.u) return res.redirect('/channel/'+ch.id)
         else return res.redirect('/channel/'+ch.id+'?u='+encodeURIComponent(req.query.u))

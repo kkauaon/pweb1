@@ -3,15 +3,16 @@
         <%- include('partials/channel-sidebar.ejs') %>
             <div class="md:w-4/6">
                 <div class="p-4">
+                    <% if (channel.id != "unknown") { %>
                     <div class="relative">
                         <% if (user) { %>
-                            <label for="newPostTextArea" class="block text-xl font-semibold text-gray-800 mb-2">Nova
+                            <label for="newPostTextArea" class="block text-xl font-bold text-green-950 mb-2">Nova
                                 postagem em #<%= channel.channelName %></label>
                             <textarea placeholder="Comece a escrever aqui sua nova postagem..."
                                 class="block w-full rounded-md border border-gray-300 bg-white text-gray-900 px-3 py-2 pr-20 min-h-[120px] resize-none focus:ring-2 focus:ring-blue-500"
                                 id="newPostTextArea" rows="3"></textarea>
                             <button onclick="newPostChannel('<%=JSON.stringify(channel)%>')" type="button"
-                                class="absolute bottom-2 right-4 bg-blue-600 hover:bg-blue-700 text-xs text-white font-semibold py-2 px-4 rounded-md shadow transition-colors flex flex-column justify-center items-center h-[30px] gap-x-1">
+                                class="absolute bottom-2 right-4 bg-green-700 hover:bg-green-800 cursor-pointer text-xs text-white font-semibold py-2 px-4 rounded-md shadow transition-colors flex flex-column justify-center items-center h-[30px] gap-x-1">
                                 <p>Enviar</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
                                     color="#ffffff" fill="none">
@@ -39,12 +40,19 @@
                             <% } %>
                     </div>
                     <br>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Postagens mais recentes</h3>
+                    <h3 class="text-xl font-bold text-green-950 mb-2">Postagens mais recentes em #<%= channel.channelName %></h3>
                     <div class="flex flex-col gap-y-5">
                         <% posts.filter(p => p.channel == "#"+channel.channelName).forEach(post=> { %>
                             <%- include('partials/post.ejs', { user: user, postData: post }) %>
                         <% }) %>
                     </div>
+                    <% } else { %>
+                    <div class="md:mx-8">
+                        <h1 class="text-2xl md:text-3xl font-bold text-green-950 text-center">
+                            Ops! Este canal não foi encontrado, tente acessar um canal válido pela lista de canais.
+                        </h1>
+                    </div>
+                    <% } %>
                 </div>
             </div>
     </div>

@@ -38,8 +38,8 @@ function likepost(user, pid) {
         likes -= 1;
     }
 
-    svg.setAttribute('color', liked ? `oklch(70.4% 0.191 22.216)` : `oklch(55.1% 0.027 264.364)`)
-    svg.setAttribute('fill', liked ? `oklch(70.4% 0.191 22.216)` : `none`)
+    svg.setAttribute('color', liked ? `oklch(63.7% 0.237 25.331)` : `oklch(55.1% 0.027 264.364)`)
+    svg.setAttribute('fill', liked ? `oklch(63.7% 0.237 25.331)` : `none`)
 
     btn.dataset.liked = liked;
     btn.dataset.likes = likes;
