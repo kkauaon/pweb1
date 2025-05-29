@@ -14,7 +14,7 @@ As principais tecnologias e linguagens exploradas neste repositório incluem:
 
 * **HTML5**: Linguagem de marcação fundamental para a estrutura das páginas web.
 * **CSS3**: Utilizado para estilização e design das páginas.
-* **JavaScript)**: Linguagem de programação para adicionar interatividade e lógica às aplicações.
+* **JavaScript**: Linguagem de programação para adicionar interatividade e lógica às aplicações.
 * **EJS**: Embedded JavaScript templating, utilizado para renderizar páginas dinâmicas.
 * **Node.js & Express.js**: Ambiente de execução JavaScript no lado do servidor e framework para construção de APIs e aplicações web.
 
