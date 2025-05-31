@@ -34,7 +34,7 @@ Este repositório é primariamente para fins educacionais e de demonstração do
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/kkauaon/pweb1.git](https://github.com/kkauaon/pweb1.git)
+    git clone https://github.com/kkauaon/pweb1.git
     ```
 2.  **Navegue até a pasta do projeto desejado:**
     ```bash
