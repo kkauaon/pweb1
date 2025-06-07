@@ -59,6 +59,3 @@ Para rodar este projeto localmente, siga os passos abaixo:
     ```bash
     npx nodemon
     ```
-
-
-`Ideia e projeto desenvolvido para essa atividade apenas por mim, Kauã Sousa. Desconfie de cópias.`
