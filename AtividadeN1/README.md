@@ -10,7 +10,7 @@ Algumas etapas sobre esta atividade estão contidos no documento **[Atividade N1
 
 ---
 ## 📂 Conteúdo do Diretório
-* **`app.js`** (ou similar): Arquivo principal de configuração do servidor Express.
+* **`app.js`**: Arquivo principal de configuração do servidor Express.
 * **`views/`**: Pasta contendo os arquivos de template EJS.
     * **`partials/`**: Pasta contendo os partials EJS (conteúdo reutilizável).
 * **`routes/`**: Pasta contendo as definições de rotas da aplicação.
