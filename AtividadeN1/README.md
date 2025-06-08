@@ -1,7 +1,8 @@
-# Atividade N1 - Disciplina Programação Web 1 🚀
+# Fórum IFCE - Atividade N1
 
-## 🎯 Descrição da atividade
-Criar a estrutura básica de uma aplicação. Implementar tudo relacionado a parte visual, tais como, HTML, CSS, cores, modelos de página (templates), formulários, etc. Apenas na N2 serão implementadas as funcionalidades (autenticação, bancos de dados, integração com APIs, etc). Implementar as rotas utilizando o Nodejs (Express). 
+## 🎯 Descrição do projeto
+Fórum IFCE é um fórum criado para os alunos da instituição poderem livremente expressar suas ideias. Cada curso tem seu próprio canal/chat onde podem criar postagens referentes ao assunto do canal.  
+O projeto oferece também funcionalidade de login e cadastro e além disso você pode curtir as postagens de outras pessoas (se logado).
 
 ---
 ## 📄 Atividade N1.pdf
