@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div style="max-width: 50%;" class="shadow rounded border p-5 d-flex flex-column align-items-center">
+        <h3 class="text-center">Confira uma citação de Ron Swanson!</h3>
+
+        <% if (error) { %>
+            <p class="text-danger text-align-center">Não foi possível pegar a mensagem de hoje!</p>
+        <% } else { %>
+            <div style="width: fit-content;" class="d-flex flex-column">
+                <br>
+                <b style="font-family: 'Bodoni Moda', serif; font-size: x-large;" class="text-primary text-center"><%= mensagem %></b>
+                <i class="text-end">- Ron Swanson</i>    
+            </div>
+
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>
